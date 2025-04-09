@@ -1,0 +1,16 @@
+  267  git status 
+  268  git commit -m "Add text_ignore.txt to .gitignore"
+  269  touch main_test.txt
+  270  git add .
+  271  git commit -m "Add main_test.txt"
+  272  git checkout -b develop
+  273  touch develop_test.txt
+  274  git add .
+  275  git commit -m "Add develop_test.txt in develop branch"
+  276  echo "just a small change" >> develop_test.txt
+  277  git status
+  278  git add .
+  279  git commit -m "Modify develop_test.txt with a small change"
+  280  git checkout main
+  281  git merge develop
+  282  git log --oneline --graph --all
